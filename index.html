@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css.css">
+
+    <title>MineSweeper</title>
+</head>
+
+<body>
+    <main>
+
+        <div id="intro">
+            <h1>🚩Campo Minado💣</h1>
+            <h2>Por: Pedro Bragança</h2>
+            <h2>⬆ Selecione a dificuldade para começar ⬆</h2>
+            <a href="https://linkedin.com/in/pedro-bragança-6b9249223" target="_blank"><img src="/linkedinIcon.png"
+                    id="Linkedin"></a>
+            <a href="https://github.com/PedroHDBD" target="_blank"><img src="/githubIcon.png" id="Github"></a>
+            <br>
+
+        </div>
+
+        <div id="background"></div>
+
+        <div class="temas" id="temas">
+            <button id="claro" class="desselected">🌞</button>
+            <button id="escuro" class="selected">🌑</button>
+        </div>
+
+        <div class="difficulty" id="difficulty">
+            <button type="button" id="x10">Fácil</button>
+            <button type="button" id="x15">Médio</button>
+            <button type="button" id="x20">Difícil</button>
+        </div>
+        <div id="tabela">
+            <table id="jogo">
+                <tr id="restart">
+                    <td colspan="4" rowspan="4">
+                        <button id="restartButton">🔃Reiniciar</button>
+                    </td>
+                </tr>
+                <tr class="menu">
+                    <td>
+                        <h2 id="totalFlags"></h2>
+                    </td>
+                    <td>
+                        <h2 id="cronometro">00:00 ⏱</h2>
+                    </td>
+                    <td>
+                        <h4 id="bestTime"></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="tdtabela">
+                        <table id="table">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h1 id="teste"></h1>
+        <script type="module" src="script.js"></script>
+</body>
+
+</html>
