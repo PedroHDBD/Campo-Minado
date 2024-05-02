@@ -542,3 +542,4 @@ function calcBestTime(melhorTempo, bestTimeDisplay) {
     return melhorTempo;
   }
 }
+

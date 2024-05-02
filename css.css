@@ -244,7 +244,7 @@ body {
 }
 
 .restart-animation {
-  animation: restartAnimation 6s linear 0s forwards;
+  animation: restartAnimation 1.5s linear 0s forwards;
 }
 
 @keyframes restartAnimation {
@@ -264,7 +264,7 @@ body {
 }
 
 .restartButton-animation {
-  animation: restartButtonAnimation 6s linear 0s forwards;
+  animation: restartButtonAnimation 1.5s linear 0s forwards;
 }
 
 @keyframes restartButtonAnimation {
