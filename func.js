@@ -65,16 +65,7 @@ export function printGrid(campo, tam) {
       var classe = campo[i][j].isBomb ? "bomba" : "blank";
       var buttonId = "button_" + i + "_" + j;
       conteudoTable +=
-        "<td><button type='button' id='" +
-        buttonId +
-        "' value='" +
-        campo[i][j].value +
-        "' class='" +
-        classe +
-        "'>" +
-        campo[i][j].value +
-        " " +
-        "</button></td>";
+        "<td><button type='button' id='" + buttonId + "' value='" + campo[i][j].value + "' class='" + classe + "'>" + campo[i][j].value + " " + "</button></td>";
     }
     conteudoTable += "</tr>";
   }
