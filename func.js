@@ -25,11 +25,7 @@ let minutos = 0;
 let cronometroAtivo = false;
 var countFlaggedBombs = 0;
 
-function randNum(x) {
-  return Math.floor(Math.random() * 100) + 1;
-}
-
-export function geraLinha(tam) {
+export function geraLinha(tam, qtd) {
   campo = [];
   amountFlags = 0;
   auxtam = tam;
@@ -42,11 +38,10 @@ export function geraLinha(tam) {
     campo.push(linha);
   }
 
-  if (auxtam == 8) {
     var qtdbombas = 0;
-    while (qtdbombas < 10) {
-      var i = Math.floor(Math.random() * 8);
-      var j = Math.floor(Math.random() * 8);
+    while (qtdbombas < qtd) {
+      var i = Math.floor(Math.random() * auxtam);
+      var j = Math.floor(Math.random() * auxtam);
       if (campo[i][j].isBomb === false) {
         campo[i][j].isBomb = true;
         qtdbombas++;
@@ -55,37 +50,7 @@ export function geraLinha(tam) {
         continue;
       }
     }
-  }
-
-  if (auxtam == 13) {
-    var qtdbombas = 0;
-    while (qtdbombas < 25) {
-      var i = Math.floor(Math.random() * 13);
-      var j = Math.floor(Math.random() * 13);
-      if (campo[i][j].isBomb === false) {
-        campo[i][j].isBomb = true;
-        qtdbombas++;
-        amountFlags += 1;
-      } else {
-        continue;
-      }
-    }
-  }
-
-  if (auxtam == 18) {
-    var qtdbombas = 0;
-    while (qtdbombas < 45) {
-      var i = Math.floor(Math.random() * 18);
-      var j = Math.floor(Math.random() * 18);
-      if (campo[i][j].isBomb === false) {
-        campo[i][j].isBomb = true;
-        qtdbombas++;
-        amountFlags += 1;
-      } else {
-        continue;
-      }
-    }
-  }
+  
   totalFlags.innerHTML = amountFlags + " 🚩";
   auxAmountFlags = amountFlags;
 

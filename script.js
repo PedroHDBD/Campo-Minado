@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     x10.addEventListener("click", () => {
       cronometro.style.display = "block";
       var tam = 8;
-      campo = geraLinha(tam);
+      var qtd = 10;
+      campo = geraLinha(tam, qtd);
       printGrid(campo, tam);
       checkSurroundings(campo, tam);
       restart.style.display = "none";
@@ -41,7 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     x15.addEventListener("click", () => {
       cronometro.style.display = "block";
       var tam = 13;
-      campo = geraLinha(tam);
+      var qtd = 25;
+      campo = geraLinha(tam, qtd);
       printGrid(campo, tam);
       checkSurroundings(campo, tam);
       restart.style.display = "none";
@@ -70,7 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
     x20.addEventListener("click", () => {
       cronometro.style.display = "block";
       var tam = 18;
-      campo = geraLinha(tam);
+      var qtd = 45;
+      campo = geraLinha(tam, qtd);
       printGrid(campo, tam);
       checkSurroundings(campo, tam);
       restart.style.display = "none";
