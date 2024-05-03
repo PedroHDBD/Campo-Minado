@@ -101,7 +101,6 @@ table {
   table-layout: auto;
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 2.5svw 2.5svw 0px 0px;
   backdrop-filter: blur(0.5svw);
 }
 
@@ -231,6 +230,9 @@ body {
 }
 
 #restart {
+  width: 40svw;
+  height: 44svw;
+  border-radius: 2.5svw;
   background-color: rgba(150, 150, 150, 0.5);
   position: absolute;
   display: flex;
@@ -243,6 +245,8 @@ body {
 }
 
 #restart button {
+  padding: 1.5svw 2svw;
+  border-radius: 2.5svw;
   background-color: rgba(255, 255, 255, 0.8);
   border: 0;
   color: black;
@@ -416,7 +420,7 @@ img {
 
 
 .jogofacil .menu, .jogomedio .menu, .jogodificil .menu {
-  border-radius: 2svw 2svw 0px 0px;
+  border-radius: 2.5svw 2.5svw 0px 0px;
   width: 40svw;
   height: 4svw;
   font-size: 1.2svw;
@@ -505,4 +509,16 @@ img {
   #escuro {
     border-radius: 0px 0px 50em 50em;
   }
+
+  #restart {
+    width: 90svw;
+    height: 101svw;
+    border-radius: 5svw;
+  }
+
+  #restart button {
+    padding: 3svw 4.5svw;
+    border-radius: 5svw;
+  }
+
 }
