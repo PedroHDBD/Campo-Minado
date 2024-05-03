@@ -9,18 +9,24 @@ html {
 
 #background {
   background-image: url("darkMineSweeper.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
   z-index: -10;
   filter: saturate(150%) blur(2px) contrast(150%);
 }
 
 #table td button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
   border: none;
   background-color: rgba(255, 255, 255, 0);
   padding: 0;
@@ -85,7 +91,7 @@ table {
 }
 
 #bestTime {
-  margin: 0;
+  float: right;
 }
 
 .menu {
@@ -95,7 +101,7 @@ table {
   table-layout: auto;
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 25px 25px 0px 0px;
+  border-radius: 2.5svw 2.5svw 0px 0px;
   backdrop-filter: blur(0.5svw);
 }
 
@@ -165,8 +171,9 @@ body {
 }
 
 #jogo {
-  border-radius: 2svw;
-  margin-top: 2%;
+  border-radius: 2.6svw;
+  box-shadow : 0 0 2svw 0.1svw white;
+  margin-top: 6%;
 }
 
 @keyframes loseAnimation {
@@ -207,8 +214,8 @@ body {
 }
 
 #table {
-  padding: 9px 9px 9px 9px;
-  border-radius: 0px 0px 25px 25px;
+  padding: 0.9svw 0.9svw 0.9svw 0.9svw;
+  border-radius: 0px 0px 2.5svw 2.5svw;
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(0.3svw);
 }
@@ -307,7 +314,6 @@ body {
   top: 0;
   left: 97%;
   transform: translateX(-50%);
-
   z-index: 2;
   display: none;
 }
@@ -377,131 +383,126 @@ img {
   margin: 0px 5%;
 }
 
-.jogofacil {
-  width: 19.5svw;
-  border-radius: 2svw;
-  box-shadow: 0 0 2svw 0.1svw rgba(255, 255, 255, 1);
+.jogofacil, .jogofacil #table, .jogomedio, .jogomedio #table, .jogodificil, .jogodificil #table{
+  width: 40svw;
+  height: 40svw;
 }
 
-.jogofacil #table {
-  padding: 0.6svw;
-  border-radius: 0px 0px 2svw 2svw;
-  width: 19.5svw;
-  height: 19.5svw;
+.jogofacil #table td button{
+  font-size: 3.45svw;
+  width: 4.75svw;
+  height: 4.75svw;
 }
 
-.jogofacil #table td button {
-  width: 2.2svw;
-  height: 2.2svw;
-  font-size: 1.5svw;
+.jogomedio #table td button{
+  font-size: 2.13svw;
+  width: 2.93svw;
+  height: 2.93svw;
 }
 
-.jogofacil .menu {
+.jogodificil #table td button{
+  font-size: 1.54svw;
+  width: 2.12svw;
+  height: 2.12svw;
+}
+
+.jogofacil .menu #totalflags, .jogomedio .menu #totalflags, .jogodificil .menu #totalflags{
+  margin: 0 0 0 2svw;
+}
+
+.jogofacil .menu #bestTime, .jogomedio .menu #bestTime, .jogodificil .menu #bestTime{
+  margin: 0 2svw 0 0;
+}
+
+
+.jogofacil .menu, .jogomedio .menu, .jogodificil .menu {
   border-radius: 2svw 2svw 0px 0px;
-  width: 19.5svw;
-  height: 2svw;
+  width: 40svw;
+  height: 4svw;
   font-size: 1.2svw;
 }
 
-.jogofacil .menu #totalflags {
-  margin: 0 0 0 1.5svw;
-}
+@media (max-width: 900px) {
 
-.jogofacil #restart {
-  width: 19.5svw;
-  height: 24.2svw;
-  border-radius: 2svw;
-}
+    #intro {
+      top: 50svw;
+      width: 85svw;
+      height: 53svw;
+    }
 
-.jogofacil #restart button {
-  font-size: 1.5svw;
-  width: 11.5svw;
-  height: 6.5svh;
-  border-radius: 2svw;
-}
+    #intro h1 {
+      font-size: 8svw;
+    }
+    
+    #intro h2 {
+      font-size: 6svw;
+    }
+    
+    img {
+      width: 11svw;
+    }
 
-.jogomedio {
-  width: 19.5svw;
-  border-radius: 2svw;
-  box-shadow: 0 0 2svw 0.1svw rgba(255, 255, 255, 1);
-}
+    #jogo {
+      margin-top: 120%;
+      border-radius: 5svw;
+    }
 
-.jogomedio #table {
-  padding: 0.6svw;
-  border-radius: 0px 0px 2svw 2svw;
-  width: 19.5svw;
-  height: 19.5svw;
-}
+  .jogofacil, .jogofacil #table, .jogomedio, .jogomedio #table, .jogodificil, .jogodificil #table{
+    width: 90svw;
+    height: 90svw;
+  }
 
-.jogomedio #table td button {
-  width: 2.2svw;
-  height: 2.2svw;
-  font-size: 1.5svw;
-}
+  .jogofacil .menu, .jogomedio .menu, .jogodificil .menu {
+    border-radius: 5svw 5svw 0px 0px;
+    width: 90svw;
+    height: 9svw;
+    font-size: 4svw;
+  }
 
-.jogomedio .menu {
-  border-radius: 2svw 2svw 0px 0px;
-  width: 29.8svw;
-  height: 2svw;
-  font-size: 1.2svw;
-}
+  .jogofacil #table td button{
+    font-size: 7.7svw;
+    width: 11svw;
+    height: 11svw;
+  }
+  
+  .jogomedio #table td button{
+    font-size: 4.5svw;
+    width: 6.7svw;
+    height: 6.7svw;
+  }
+  
+  .jogodificil #table td button{
+    font-size: 2.8svw;
+    width: 4.5svw;
+    height: 4.5svw;
+  }
 
-.jogomedio .menu #totalflags {
-  margin: 0 0 0 1.5svw;
-}
+  #table {
+    border-radius: 0px 0px 5svw 5svw;
+  }
 
-.jogomedio #restart {
-  width: 29.8svw;
-  height: 33svw;
-  border-radius: 2svw;
-}
+  .difficulty {
+    width: 66svw;
+  }
+  
+  .difficulty button {
+    width: 22svw;
+    height: 10svw;
+    font-size: 4svw;
+    border: 1px solid rgba(0, 0, 0, 0.055);
+  }
 
-.jogomedio #restart button {
-  font-size: 1.5svw;
-  width: 11.5svw;
-  height: 6.5svh;
-  border-radius: 2svw;
-}
+  .temas {
+    left: 92%;
+    transform: translateX(-50%);
+  }
+  
+  .temas button {
+    height: 8.5svw;
+    font-size: 4svw;
+  }
 
-.jogodificil {
-  width: 19.5svw;
-  border-radius: 2svw;
-  box-shadow: 0 0 2svw 0.1svw rgba(255, 255, 255, 1);
-}
-
-.jogodificil #table {
-  padding: 0.6svw;
-  border-radius: 0px 0px 2svw 2svw;
-  width: 19.5svw;
-  height: 19.5svw;
-}
-
-.jogodificil #table td button {
-  width: 2.2svw;
-  height: 2.2svw;
-  font-size: 1.5svw;
-}
-
-.jogodificil .menu {
-  border-radius: 2svw 2svw 0px 0px;
-  width: 40.8svw;
-  height: 2svh;
-  font-size: 1.2svw;
-}
-
-.jogodificil .menu #totalflags {
-  margin: 0 0 0 1.5svw;
-}
-
-.jogodificil #restart {
-  width: 40.8svw;
-  height: 44svw;
-  border-radius: 2svw;
-}
-
-.jogodificil #restart button {
-  font-size: 1.5svw;
-  width: 11.5svw;
-  height: 6.5svh;
-  border-radius: 2svw;
+  #escuro {
+    border-radius: 0px 0px 50em 50em;
+  }
 }
